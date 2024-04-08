@@ -23,7 +23,7 @@ h2{
 }
 
 button{
-    outline: none; /* Для синий ободки */
+    outline: none;
     border: 0;
     padding: 0px;
     background: transparent;
@@ -41,14 +41,13 @@ li{
 body{
     color: black;
     font-size: 16px;
-    padding: 25px 50px 25px 50px;
+    padding: 1% 2% 1% 2%;
     margin: 0;
     font-family: "Rubik", "Arial";
 }
 
 .user__text_DM-sans{
     font-family: "DM-sans"; /* Не работает с руссиан лангуаге */
-    font-size: 24px;
     font-weight: bold;
     color: #777E90;
 }
@@ -59,3 +58,18 @@ body{
     font-size: 16px;
     color: grey;
 }
+
+.checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+.checkbox + label {
+	position: relative;
+	padding: 0 0 0 60px;
+	cursor: pointer;
+}
+.checkbox + label:before {
+	content: '';
+	position: absolute;
