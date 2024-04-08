@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Rubik";
+    src: url(../assets/font/Rubik.ttf);
+}
+
+@font-face {
+    font-family: "DM-sans";
+    src: url(../assets/font/DMSans-Bold.ttf);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    margin: 0;
+}
+
+h2{
+    font-size: 24px;
+    margin: 0;
+}
+
+button{
+    outline: none; /* Для синий ободки */
+    border: 0;
+    padding: 0px;
+    background: transparent;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    color: black;
+    font-size: 16px;
+    padding: 25px 50px 25px 50px;
+    margin: 0;
+    font-family: "Rubik", "Arial";
+}
+
+.user__text_DM-sans{
+    font-family: "DM-sans"; /* Не работает с руссиан лангуаге */
+    font-size: 24px;
+    font-weight: bold;
+    color: #777E90;
+}
+
+
+.standart-text_grey{
+    font-family: "Rubik", "Arial";
+    font-size: 16px;
+    color: grey;
+}
