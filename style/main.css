@@ -30,6 +30,14 @@ nav{
     background-image: url('../assets/img/UserIcon.svg');
 }
 
+.user-profile__link:hover{
+    color: #363940;
+}
+
+.user-profile__link:hover > .user-avatar{
+    background-image: url(../assets/img/black-userIcon.svg);
+}
+
 /* Main */
 
 main{
@@ -94,7 +102,7 @@ main{
     padding: 20px 25px 20px 0px;
     flex-direction: column;
     justify-content: space-between;
-    /* min-width: 63%; */
+    min-width: 63%;
 }
 
 .project__title{

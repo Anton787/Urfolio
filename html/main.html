@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="../style/standart.css">
 </head>
 <body>
-    <!-- Тест -->
     <header>
         <nav>
             <a href="./main.html"><img src="../assets/img/logo.png" class="logo" alt="Логотип"></a>
             <div class="user-profile user__text_DM-sans">
-                <a href="" id="profile-link" class="user__text_DM-sans">
+                <a href="" id="profile-link" class="user-profile__link user__text_DM-sans">
                     <p class="nick-name" id="user-name">NickName</p>
                     <div class="user-avatar"></div>
                 </a>
@@ -72,8 +71,7 @@
                             <a href="../html/">Подробнее</a>
                             <div class="project__rating">
                                 <div class="like__wrapper">
-                                    <input type="checkbox" class="checkbox" id="like-checkbox" />
-                                    <label for="checkbox" class="info__rating-project"><img src="../assets/img/Likes.png" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></label>
+                                    <button type="button" class="info__rating-project" id="like-button"><img src="../assets/img/Likes.png" id="like-icon" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></button>
                                 </div>
                                 <div class="info__rating-project">
                                     <img src="../assets/img/Comments.png" alt="Иконка комментария"><span class="activities-number" id="comments-number">0</span>
@@ -99,8 +97,7 @@
                             <a href="../html/">Подробнее</a>
                             <div class="project__rating">
                                 <div class="like__wrapper">
-                                    <input type="checkbox" class="checkbox" id="like-checkbox" />
-                                    <label for="checkbox" class="info__rating-project"><img src="../assets/img/Likes.png" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></label>
+                                    <button type="button" class="info__rating-project" id="like-button"><img src="../assets/img/Likes.png" id="like-icon" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></button>
                                 </div>
                                 <div class="info__rating-project">
                                     <img src="../assets/img/Comments.png" alt="Иконка комментария"><span class="activities-number" id="comments-number">0</span>
@@ -126,8 +123,7 @@
                             <a href="../html/">Подробнее</a>
                             <div class="project__rating">
                                 <div class="like__wrapper">
-                                    <input type="checkbox" class="checkbox" id="like-checkbox" />
-                                    <label for="checkbox" class="info__rating-project"><img src="../assets/img/Likes.png" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></label>
+                                    <button type="button" class="info__rating-project" id="like-button"><img src="../assets/img/Likes.png" id="like-icon" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></button>
                                 </div>
                                 <div class="info__rating-project">
                                     <img src="../assets/img/Comments.png" alt="Иконка комментария"><span class="activities-number" id="comments-number">0</span>
@@ -145,5 +141,7 @@
     <footer>
         <button class="footer__button user__text_DM-sans" type="button">Ещё проекты <span id="still-projects">(60+)</span></button>
     </footer>
+
+    <script src="../js/main.js" defer></script>
 </body>
 </html>
