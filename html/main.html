@@ -10,11 +10,11 @@
 <body>
     <header>
         <nav>
-            <a href="./main.html"><img src="../assets/img/logo.png" alt="Логотип"></a>
+            <a href="./main.html"><img src="../assets/img/logo.png" class="logo" alt="Логотип"></a>
             <div class="user-profile user__text_DM-sans">
                 <a href="" id="profile-link" class="user__text_DM-sans">
                     <p class="nick-name" id="user-name">NickName</p>
-                    <img src="../assets/img/UserIcon.svg" alt="Ваша аватар">
+                    <div class="user-avatar"></div>
                 </a>
             </div>
         </nav>
@@ -27,13 +27,13 @@
                     <hr>
                     <ul>
                         <li class="setting__item">
-                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">По времени</span></button>
+                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">по времени</span></button>
                         </li>
                         <li class="setting__item">
-                            <button type="button" id="sorting-rating"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">По рейтингу</span></button>
+                            <button type="button" id="sorting-rating"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">по рейтингу</span></button>
                         </li>
                         <li class="setting__item">
-                            <button type="button" class="button_style-none" id="sorting-title"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">По названию</span></button>
+                            <button type="button" class="button_style-none" id="sorting-title"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">по названию</span></button>
                         </li>
                     </ul>
                 </div>
@@ -42,51 +42,28 @@
                     <hr>
                     <ul>
                         <li class="setting__item">
-                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">По времени</span></button>
+                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">тип проекта</span></button>
                         </li>
                         <li class="setting__item">
-                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">По времени</span></button>
+                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">время публикации</span></button>
                         </li>
                         <li class="setting__item">
-                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">По времени</span></button>
+                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">автор</span></button>
                         </li>
                         <li class="setting__item">
-                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">По времени</span></button>
+                            <button type="button" class="button_style-none" id="sorting-time"><img src="../assets/img/arrow.svg" class="setting-arrow" alt="Стрелка"> <span class="standart-text_grey">рейтинг</span></button>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="project__feed">
                 <div class="feed__item">
-                    <img src="../assets/img/project-photo.png" alt="Привью проекта" id="project-photo">
+                    <a href="#" id="user-project__link"><img src="../assets/img/project-photo.png" alt="Привью проекта" id="project-photo"></a>
                     <div class="project__card">
                         <div class="project__title">
-                            <h2 id="name-progect">Название проекта</h2>
-                            <span id="project-date">21 Map 2024</span>
-                            <p class="progect__description"><b>Описание проекта</b><br> <span id="progect__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus dolor ducimus! Ab quod eaque, distinctio, deleniti maxime</span></p>
-                        </div>
-                        <div class="project__information">
-                            <a href="../html/">Подробнее</a>
-                            <div class="project__rating">
-                                <div class="like__wrapper">
-                                    <input type="checkbox" class="checkbox" id="like-checkbox" />
-                                    <label for="checkbox" class="info__rating-project"><img src="../assets/img/Likes.png" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></label>
-                                </div>
-                                <div class="info__rating-project">
-                                    <img src="../assets/img/Comments.png" alt="Иконка комментария"><span class="activities-number" id="comments-number">0</span>
-                                </div>
-                                <div class="info__rating-project">
-                                    <button type="button" id="share"><img src="../assets/img/Share.png" alt="Иконка поделиться"></button> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="feed__item">
-                    <img src="../assets/img/project-photo.png" alt="Привью проекта" id="project-photo">
-                    <div class="project__card">
-                        <div class="project__title">
-                            <h2 id="name-progect">Название проекта</h2>
+                            <a href="#" id="user-project__link">
+                                <h2 id="name-progect">Название проекта</h2>
+                            </a>
                             <span id="project-date">20 Map 2024</span>
                             <p class="progect__description"><b>Описание проекта</b><br> <span id="progect__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus dolor ducimus! Ab quod eaque, distinctio, deleniti maxime</span></p>
                         </div>
@@ -108,10 +85,39 @@
                     </div>
                 </div>
                 <div class="feed__item">
-                    <img src="../assets/img/project-photo.png" alt="Привью проекта" id="project-photo">
+                    <a href="#" id="user-project__link"><img src="../assets/img/project-photo.png" alt="Привью проекта" id="project-photo"></a>
                     <div class="project__card">
                         <div class="project__title">
-                            <h2 id="name-progect">Название проекта</h2>
+                            <a href="#" id="user-project__link">
+                                <h2 id="name-progect">Название проекта</h2>
+                            </a>
+                            <span id="project-date">20 Map 2024</span>
+                            <p class="progect__description"><b>Описание проекта</b><br> <span id="progect__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus dolor ducimus! Ab quod eaque, distinctio, deleniti maxime</span></p>
+                        </div>
+                        <div class="project__information">
+                            <a href="../html/">Подробнее</a>
+                            <div class="project__rating">
+                                <div class="like__wrapper">
+                                    <input type="checkbox" class="checkbox" id="like-checkbox" />
+                                    <label for="checkbox" class="info__rating-project"><img src="../assets/img/Likes.png" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></label>
+                                </div>
+                                <div class="info__rating-project">
+                                    <img src="../assets/img/Comments.png" alt="Иконка комментария"><span class="activities-number" id="comments-number">0</span>
+                                </div>
+                                <div class="info__rating-project">
+                                    <button type="button" id="share"><img src="../assets/img/Share.png" alt="Иконка поделиться"></button> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feed__item">
+                    <a href="#" id="user-project__link"><img src="../assets/img/project-photo.png" alt="Привью проекта" id="project-photo"></a>
+                    <div class="project__card">
+                        <div class="project__title">
+                            <a href="#" id="user-project__link">
+                                <h2 id="name-progect">Название проекта</h2>
+                            </a>
                             <span id="project-date">20 Map 2024</span>
                             <p class="progect__description"><b>Описание проекта</b><br> <span id="progect__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus dolor ducimus! Ab quod eaque, distinctio, deleniti maxime</span></p>
                         </div>

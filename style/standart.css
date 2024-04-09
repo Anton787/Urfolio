@@ -73,3 +73,8 @@ body{
 .checkbox + label:before {
 	content: '';
 	position: absolute;
+}
+
+.logo{
+    width: 150px;
+}
