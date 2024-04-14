@@ -1,18 +1,20 @@
 // Лайки постов
 const like_button = document.querySelectorAll('#like-button');
-const like_icon = document.querySelectorAll('#like-icon');
+const like_icon = document.querySelectorAll('#like-icon path');
 const sum_like = document.querySelectorAll('#like-number');
-let amount_like = Array(like_button.length).fill({count: 0, liked: false}); // выгрузка с бэка
+let amount_like = Array.from({ length: like_button.length }, () => ({ count: 0, liked: false }));// выгрузка с бэка
 
 function likePost(i){
+    console.log('TYT',i, amount_like)
     if(!amount_like[i].liked){
-        like_icon[i].src = "../assets/img/red-likes.svg";
         sum_like[i].style.color = "#FF0000";
         amount_like[i].count += 1;
         amount_like[i].liked = true;
+        like_icon[i].setAttribute('fill', '#FF0000');
         sum_like[i].innerText = amount_like[i].count;
     } else{
-        like_icon[i].src = "../assets/img/Likes.png";
+        console.log('TYT else', i, amount_like[i].liked)
+        like_icon[i].setAttribute('fill', '#CAD1E1');
         sum_like[i].style.color = "#CAD1E1";
         amount_like[i].count -= 1;
         amount_like[i].liked = false;
@@ -29,6 +31,7 @@ for (let i = 0; i<like_button.length; i++){
 
 // Сортировка ленты
 const sort_type_button = document.querySelectorAll("#sorting-type");
+const sort_type_span = document.querySelectorAll("#sorting-type span");
 var lines_time = document.querySelectorAll('#sort-type_time line');
 var lines_rating = document.querySelectorAll('#sort-type_rating line');
 var lines_title = document.querySelectorAll('#sort-type_title line');
@@ -44,6 +47,7 @@ function sort(i, sortTypes){
         if (sortTypes.timeSortType == 'none') {
             lines_time[0].setAttribute('x2', '12');
             lines_time[1].setAttribute('x2', '7');
+            sort_type_span[i].style.color = "#5b606b"
             sortTypes.timeSortType = 'ascending';
             console.log( sortTypes.timeSortType, i);
         } else if ( sortTypes.timeSortType == 'ascending') {
@@ -53,14 +57,15 @@ function sort(i, sortTypes){
         }else{
             lines_time[1].setAttribute('x2', '2');
             lines_time[2].setAttribute('x2', '2');
+            sort_type_span[i].style.color = "#9c9c9c"
             sortTypes.timeSortType = "none";
         }
         sendSortTypeToBackend(i, sortTypes.timeSortType);
-    }
-    if(i == 1){
+    } else if(i == 1){
         if (sortTypes.ratingSortType == 'none') {
             lines_rating[0].setAttribute('x2', '12');
             lines_rating[1].setAttribute('x2', '7');
+            sort_type_span[i].style.color = "#5b606b"
             sortTypes.ratingSortType = 'ascending';
             console.log(sortTypes.ratingSortType, i);
         } else if (sortTypes.ratingSortType == 'ascending') {
@@ -70,13 +75,14 @@ function sort(i, sortTypes){
         }else{
             lines_rating[1].setAttribute('x2', '2');
             lines_rating[2].setAttribute('x2', '2');
+            sort_type_span[i].style.color = "#9c9c9c"
             sortTypes.ratingSortType = "none";
         }
         sendSortTypeToBackend(i,sortTypes.ratingSortType);
-    }
-    if(i == 2){
+    } else if(i == 2){
         if (sortTypes.titleSortType == 'none') {
             lines_title[0].setAttribute('x2', '12');
+            sort_type_span[i].style.color = "#5b606b"
             lines_title[1].setAttribute('x2', '7');
             sortTypes.titleSortType = 'ascending';
             console.log(sortTypes.titleSortType, i);
@@ -87,6 +93,7 @@ function sort(i, sortTypes){
         }else{
             lines_title[1].setAttribute('x2', '2');
             lines_title[2].setAttribute('x2', '2');
+            sort_type_span[i].style.color = "#9c9c9c"
             sortTypes.titleSortType = "none";
         }
         sendSortTypeToBackend(i,sortTypes.titleSortType);
@@ -105,6 +112,7 @@ for (let i = 0; i < sort_type_button.length; i++){
 
 //Фильтр ленты
 const type_filter = document.querySelectorAll("#filter-type");
+const type_filter_span = document.querySelectorAll("#filter-type span");
 const type_item = document.querySelectorAll("#type_item")
 var type_project = document.querySelectorAll("#svg_project line");
 var type_year = document.querySelectorAll("#svg_year line");
@@ -122,37 +130,45 @@ function openFilter(i,status){
         if(i == 0 && statusFilter.project == 'close'){
             type_project[0].setAttribute('stroke-width', '0');
             type_item[i].style.display = "flex"
+            type_filter_span[i].style.color = "#5b606b"
             status.project = 'open';
         } else if(i == 0 && statusFilter.project == 'open') {
             type_project[0].setAttribute('stroke-width', '2');
             type_item[i].style.display = "none"
+            type_filter_span[i].style.color = "#9c9c9c"
             status.project = 'close';
         }
         else if(i == 1 && statusFilter.year == 'close'){
             type_year[0].setAttribute('stroke-width', '0');
             type_item[i].style.display = "flex"
+            type_filter_span[i].style.color = "#5b606b"
             status.year = 'open';
         } else if(i == 1 && statusFilter.year == 'open') {
             type_year[0].setAttribute('stroke-width', '2');
             type_item[i].style.display = "none"
+            type_filter_span[i].style.color = "#9c9c9c"
             status.year = 'close';
         }
         else if(i == 2 && statusFilter.course == 'close'){
             type_course[0].setAttribute('stroke-width', '0');
             type_item[i].style.display = "flex"
+            type_filter_span[i].style.color = "#5b606b"
             status.course = 'open';
         } else if(i == 2 && statusFilter.course == 'open') {
             type_course[0].setAttribute('stroke-width', '2');
             type_item[i].style.display = "none"
+            type_filter_span[i].style.color = "#9c9c9c"
             status.course = 'close';
         }
         else if(i == 3 && statusFilter.author == 'close'){
             type_author[0].setAttribute('stroke-width', '0');
             type_item[i].style.display = "flex"
+            type_filter_span[i].style.color = "#5b606b"
             status.author = 'open';
         } else if(i == 3 && statusFilter.author == 'open') {
             type_author[0].setAttribute('stroke-width', '2');
             type_item[i].style.display = "none"
+            type_filter_span[i].style.color = "#9c9c9c"
             status.author = 'close';
         }
 };
@@ -173,4 +189,4 @@ const sendFilter = document.getElementById('#sendFilter');
 
 //Функция отправки фильтра на бэк 
 
-sendFilter.addEventListener('click', /*Название функции отправляющей на бэк*/)
+// sendFilter.addEventListener('click', /*Название функции отправляющей на бэк*/)

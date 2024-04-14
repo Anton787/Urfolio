@@ -49,6 +49,12 @@ body{
     padding: 1% 2% 1% 2%;
     margin: 0;
     font-family: "Rubik", "Arial";
+    overflow-x: hidden;
+}
+
+header + hr{
+    margin-left: -3%;
+    margin-right: -3%;
 }
 
 .user__text_DM-sans{
@@ -68,6 +74,10 @@ body{
     font-family: "Rubik", "Arial";
     font-size: 16px;
     color: #9c9c9c;
+}
+
+.standart-text_light-grey:hover{
+    color: #777E90;
 }
 
 .logo{

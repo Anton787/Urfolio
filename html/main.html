@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Urfolio</title>
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/standart.css">
 </head>
@@ -19,6 +19,7 @@
             </div>
         </nav>
     </header>
+    <hr>
     <main>
         <div class="main__wrapper">
             <div class="feed-setting">
@@ -33,7 +34,7 @@
                                     <line x1="17" y1="5.5" x2="2" y2="5.5" stroke="#95A1BB"/>
                                     <line x1="17" y1="9.5" x2="2" y2="9.5" stroke="#95A1BB"/>
                                 </svg>
-                                <span class="standart-text_grey">по времени</span>
+                                <span class="standart-text_light-grey">по времени</span>
                             </button>
                         </li>
                         <li class="setting__item">
@@ -43,7 +44,7 @@
                                     <line x1="17" y1="5.5" x2="2" y2="5.5" stroke="#95A1BB"/>
                                     <line x1="17" y1="9.5" x2="2" y2="9.5" stroke="#95A1BB"/>
                                 </svg>
-                                <span class="standart-text_grey">по рейтингу</span>
+                                <span class="standart-text_light-grey">по рейтингу</span>
                             </button>
                         </li>
                         <li class="setting__item">
@@ -53,7 +54,7 @@
                                     <line x1="17" y1="5.5" x2="2" y2="5.5" stroke="#95A1BB"/>
                                     <line x1="17" y1="9.5" x2="2" y2="9.5" stroke="#95A1BB"/>
                                 </svg>
-                                <span class="standart-text_grey">по названию</span>
+                                <span class="standart-text_light-grey">по названию</span>
                             </button>
                         </li>
                     </ul>
@@ -68,7 +69,7 @@
                                     <line x1="8" x2="8" y2="16" stroke="#95A1BB" stroke-width="2"/>
                                     <line y1="8" x2="16" y2="8" stroke="#95A1BB" stroke-width="2"/>
                                 </svg>
-                                <span class="standart-text_grey">тип проекта</span>
+                                <span class="standart-text_light-grey">тип проекта</span>
                             </button>
                             <div class="filter-type__item" id="type_item">
                                 <div class="filter-type__wrapper">
@@ -87,7 +88,7 @@
                                     <line x1="8" x2="8" y2="16" stroke="#95A1BB" stroke-width="2"/>
                                     <line y1="8" x2="16" y2="8" stroke="#95A1BB" stroke-width="2"/>
                                 </svg>
-                                <span class="standart-text_grey">учебный год</span>
+                                <span class="standart-text_light-grey">учебный год</span>
                             </button>
                             <div class="filter-type__item" id="type_item">
                                 <div class="filter-type__wrapper">
@@ -106,7 +107,7 @@
                                     <line x1="8" x2="8" y2="16" stroke="#95A1BB" stroke-width="2"/>
                                     <line y1="8" x2="16" y2="8" stroke="#95A1BB" stroke-width="2"/>
                                 </svg>
-                                <span class="standart-text_grey">номер курса</span>
+                                <span class="standart-text_light-grey">номер курса</span>
                             </button>
                             <div class="filter-type__item" id="type_item">
                                 <div class="filter-type__wrapper">
@@ -125,7 +126,7 @@
                                     <line x1="8" x2="8" y2="16" stroke="#95A1BB" stroke-width="2"/>
                                     <line y1="8" x2="16" y2="8" stroke="#95A1BB" stroke-width="2"/>
                                 </svg>
-                                <span class="standart-text_grey">автор</span>
+                                <span class="standart-text_light-grey">автор</span>
                             </button>
                             <div class="filter-type__item" id="type_item">
                                 <div class="filter-type__wrapper">
@@ -145,14 +146,21 @@
                             <a href="#" id="user-project__link">
                                 <h2 id="name-progect">Название проекта</h2>
                             </a>
-                            <span id="project-date">20 Map 2024</span>
+                            <div class="typeDate-project">
+                                <span id="type-project">Тип проекта</span><span id="project-date">2023-2024</span>
+                            </div>
                             <p class="progect__description"><b>Описание проекта</b><br> <span id="progect__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus dolor ducimus! Ab quod eaque, distinctio, deleniti maxime</span></p>
                         </div>
                         <div class="project__information">
                             <a href="../html/">Подробнее</a>
                             <div class="project__rating">
                                 <div class="like__wrapper">
-                                    <button type="button" class="info__rating-project" id="like-button"><img src="../assets/img/Likes.png" id="like-icon" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></button>
+                                    <button type="button" class="info__rating-project" id="like-button">
+                                        <svg id="like-icon" width="43" height="38" viewBox="0 0 43 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.4021 38L18.2988 35.2665C7.27672 25.5956 0 19.2174 0 11.3896C0 5.01144 5.17932 0 11.7712 0C15.4951 0 19.0693 1.67738 21.4021 4.32807C23.735 1.67738 27.3091 0 31.0331 0C37.6249 0 42.8043 5.01144 42.8043 11.3896C42.8043 19.2174 35.5275 25.5956 24.5054 35.2872L21.4021 38Z" fill="#CAD1E1"/>
+                                        </svg>
+                                        <span class="activities-number" id="like-number">0</span>
+                                    </button>
                                 </div>
                                 <div class="info__rating-project">
                                     <button type="button" id="share"><img src="../assets/img/Share.png" alt="Иконка поделиться"></button> 
@@ -168,14 +176,21 @@
                             <a href="#" id="user-project__link">
                                 <h2 id="name-progect">Название проекта</h2>
                             </a>
-                            <span id="project-date">20 Map 2024</span>
+                            <div class="typeDate-project">
+                                <span id="type-project">Тип проекта</span><span id="project-date">2023-2024</span>
+                            </div>
                             <p class="progect__description"><b>Описание проекта</b><br> <span id="progect__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus dolor ducimus! Ab quod eaque, distinctio, deleniti maxime</span></p>
                         </div>
                         <div class="project__information">
                             <a href="../html/">Подробнее</a>
                             <div class="project__rating">
                                 <div class="like__wrapper">
-                                    <button type="button" class="info__rating-project" id="like-button"><img src="../assets/img/Likes.png" id="like-icon" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></button>
+                                    <button type="button" class="info__rating-project" id="like-button">
+                                        <svg class="like-svg" id="like-icon" width="43" height="38" viewBox="0 0 43 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.4021 38L18.2988 35.2665C7.27672 25.5956 0 19.2174 0 11.3896C0 5.01144 5.17932 0 11.7712 0C15.4951 0 19.0693 1.67738 21.4021 4.32807C23.735 1.67738 27.3091 0 31.0331 0C37.6249 0 42.8043 5.01144 42.8043 11.3896C42.8043 19.2174 35.5275 25.5956 24.5054 35.2872L21.4021 38Z" fill="#CAD1E1"/>
+                                        </svg>
+                                        <span class="activities-number" id="like-number">0</span>
+                                    </button>
                                 </div>
                                 <div class="info__rating-project">
                                     <button type="button" id="share"><img src="../assets/img/Share.png" alt="Иконка поделиться"></button> 
@@ -191,14 +206,21 @@
                             <a href="#" id="user-project__link">
                                 <h2 id="name-progect">Название проекта</h2>
                             </a>
-                            <span id="project-date">20 Map 2024</span>
+                            <div class="typeDate-project">
+                                <span id="type-project">Тип проекта</span><span id="project-date">2023-2024</span>
+                            </div>
                             <p class="progect__description"><b>Описание проекта</b><br> <span id="progect__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus dolor ducimus! Ab quod eaque, distinctio, deleniti maxime</span></p>
                         </div>
                         <div class="project__information">
                             <a href="../html/">Подробнее</a>
                             <div class="project__rating">
                                 <div class="like__wrapper">
-                                    <button type="button" class="info__rating-project" id="like-button"><img src="../assets/img/Likes.png" id="like-icon" alt="Иконка лайка"><span class="activities-number" id="like-number">0</span></button>
+                                    <button type="button" class="info__rating-project" id="like-button">
+                                        <svg id="like-icon" width="43" height="38" viewBox="0 0 43 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.4021 38L18.2988 35.2665C7.27672 25.5956 0 19.2174 0 11.3896C0 5.01144 5.17932 0 11.7712 0C15.4951 0 19.0693 1.67738 21.4021 4.32807C23.735 1.67738 27.3091 0 31.0331 0C37.6249 0 42.8043 5.01144 42.8043 11.3896C42.8043 19.2174 35.5275 25.5956 24.5054 35.2872L21.4021 38Z" fill="#CAD1E1"/>
+                                        </svg>
+                                        <span class="activities-number" id="like-number">0</span>
+                                    </button>
                                 </div>
                                 <div class="info__rating-project">
                                     <button type="button" id="share"><img src="../assets/img/Share.png" alt="Иконка поделиться"></button> 
