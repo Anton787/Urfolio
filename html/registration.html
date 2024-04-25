@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urfolio</title>
+    <link rel="stylesheet" href="../style/standart.css">
+    <link rel="stylesheet" href="../style/login.css">
 </head>
 <body>
     <header>
         <a href="./main.html"><img src="../assets/img/logo.png" alt="Логотип"></a>
     </header>
+    <hr>
     <main>
-        <div class="login">
-            <form action="" method="post"> <!-- action – это веб-адрес (URL) программы, которая обрабатывает данные формы. -->
+        <div class="login__wrapper">
+            <h1>Добро пожаловать!</h1>
+            <form class="login" action="" method="post">
                 <label for="email">Имя пользователя</label>
-                <input type="text" id="email" name="new_user_name">
+                <input type="text" placeholder="Введите имя пользователя" id="email" name="new_user_name">
 
-                <label for="email">Email</label>
-                <input type="text" id="email" name="new_user_email">
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="Введите ваш email" id="email" name="user_email">
 
                 <label for="password">Пароль</label>
-                <input type="password" id="password" name="new_user_password">
-                
-                <button type="submit">Войти</button>
+                <input type="password" placeholder="Введите пароль" id="password" name="user_password">
+                <a href="#" class="standart-text_light-grey">Забыли пароль?</a>
+                <button type="submit" class="sumbit-btn sumbit-text">Войти</button>
             </form>
         </div>
     </main>
+    <footer>
+        <div class="none-register">
+            <span class="standart-text_light-grey">У вас уже есть аккаунт?<a href="./login.html" class="standart-text go-to-regist">Войдите</a></span>
+        </div>
+    </footer>
 </body>
 </html>
