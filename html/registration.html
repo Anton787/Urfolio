@@ -24,8 +24,9 @@
 
                 <label for="password">Пароль</label>
                 <input type="password" placeholder="Введите пароль" id="password" name="user_password">
-                <a href="#" class="standart-text_light-grey">Забыли пароль?</a>
-                <button type="submit" class="sumbit-btn sumbit-text">Войти</button>
+                <span class="password-similar" id="similar"></span>
+                <input type="password" placeholder="Повторите пароль" id="password_repeat" name="user_password_repeat">
+                <button type="submit" id="sumbit" class="sumbit-btn sumbit-text">Войти</button>
             </form>
         </div>
     </main>
@@ -34,5 +35,7 @@
             <span class="standart-text_light-grey">У вас уже есть аккаунт?<a href="./login.html" class="standart-text go-to-regist">Войдите</a></span>
         </div>
     </footer>
+
+    <script src="../js/regist.js" defer></script>
 </body>
 </html>

@@ -48,8 +48,29 @@ input:not(:last-of-type){
     margin-bottom: 30px;
 }
 
-.login > a{
-    margin-bottom: 30px;
+#password{
+    margin-bottom: 5px;
+}
+
+.sumbit-btn{
+    margin-top: 30px;
+}
+
+.sumbit-btn:disabled{
+    background-color: gray;
+}
+
+.sumbit-btn:hover{
+    background-color: rgb(84, 76, 76);
+}
+
+.sumbit-btn:active{
+    background-color: rgb(21, 21, 21);
+}
+
+.password-similar{
+    margin: 0 auto;
+    color: red;
 }
 
 .standart-text_light-grey{
