@@ -67,6 +67,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 45%;
+    width: 55%;
 }
 
 .project__rating{
