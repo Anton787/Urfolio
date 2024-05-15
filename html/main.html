@@ -12,6 +12,10 @@
         <nav>
             <a href="./main.html"><img src="../assets/img/logo.png" class="logo" alt="Логотип"></a>
             <div class="user-profile user__text_DM-sans">
+                <!-- НС -->
+                <a href="#"><span class="interaction-profile__text">Добавить проект</span></a>
+                <a href="#"><span class="interaction-profile__text">Выйти</span></a>
+                <!-- НК, стили находятся в standart.css -->
                 <a href="./login.html" id="profile-link" class="user-profile__link user__text_DM-sans">
                     <p class="nick-name" id="user-name">NickName</p>
                     <div class="user-avatar"></div>
@@ -233,7 +237,18 @@
         </div>
     </main>
     <footer>
-        <button class="footer__button user__text_DM-sans" type="button">Ещё проекты <span id="still-projects">(60+)</span></button>
+        <!-- <button class="footer__button user__text_DM-sans" type="button">Ещё проекты <span id="still-projects">(60+)</span></button> -->
+        <!-- НС -->
+        <div class="feed-pages">
+            <a href=""><span class="feed-movement standart-text_light-grey">В начало</span></a>
+            <span class="numbers-pages">
+                <a href=""><span class="standart-text_light-grey">1</span></a>
+                <a href=""><span class="standart-text_light-grey">2</span></a>
+                <a href=""><span class="standart-text_light-grey">3</span></a>
+            </span>
+            <a href=""><span class="feed-movement standart-text_light-grey">В конец</span></a>
+        </div>
+        <!-- НК -->
     </footer>
 
     <script src="../js/main.js" defer></script>

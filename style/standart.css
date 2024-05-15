@@ -59,7 +59,7 @@ body{
     margin: 0;
     font-family: "Rubik", "Arial";
     overflow-x: hidden;
-    min-height: 100%;
+    min-height: 95vh;
 }
 
 header + hr{
@@ -68,11 +68,27 @@ header + hr{
 }
 
 .user__text_DM-sans{
-    font-family: "DM-sans"; /* Не работает с руссиан лангуаге */
+    font-family: "DM-sans";
     font-weight: bold;
     color: #777E90;
 }
 
+/* НС */
+.interaction-profile__text{
+    font-size: 22px;
+    font-weight: 800;
+    margin-right: 10px;
+    color: #464040;
+}
+
+.interaction-profile__text:hover{
+    color: #858585;
+}
+
+.interaction-profile__text:last-of-type{
+    margin-right: 15px;
+}
+/* НК */
 
 .standart-text_grey{
     font-family: "Rubik", "Arial";
@@ -136,5 +152,19 @@ input[type="text"]{
 .sumbit-btn{
     border-radius: 25px;
     padding: 16px 0 16px 0;
+    color: white;
+    font-weight: 800;
     background-color: #000000;
+}
+
+.sumbit-btn:disabled{
+    background-color: gray;
+}
+
+.sumbit-btn:hover{
+    background-color: rgb(84, 76, 76);
+}
+
+.sumbit-btn:active{
+    background-color: rgb(21, 21, 21);
 }
