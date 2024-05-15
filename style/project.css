@@ -166,6 +166,12 @@ form{
     margin-bottom: 40px;
     padding-left: 15px;
 }
+/* НС */
+.input-comments:not(:first-of-type){
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+/* НК */
 
 input[type="text"]{
     border: none;
