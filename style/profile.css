@@ -2,14 +2,22 @@ header{
     text-align: center;
 }
 
-
 .profile-avatar{
     margin-right: 10%;
 }
 
-/* .profile-avatar > img{
+.profile-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+}
 
-} */
+.profile-avatar img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 
 .profile-info{
     display: flex;
@@ -17,6 +25,11 @@ header{
     width: 80vw;
     margin: 0 auto;
     margin-top: 50px;
+}
+
+.user-links > a:not(:last-child){
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .user-info{
@@ -49,8 +62,14 @@ header{
     display: flex;
     flex-direction: column;  
     margin-top: 50px;
+    align-items: center;
 }
 
+.interact-project{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
 
 .profile-list{
     display: flex;
@@ -60,14 +79,41 @@ header{
 }
 
 .list-project{
-    display: none;
+    display: flex;
     margin-top: 50px;
     margin-bottom: 25px;
+    justify-content: space-between;
+    width: 70vw;
+    overflow-x: scroll;
+    gap: 90px;
 }
 
-.list-project > li{
+.list-project::-webkit-scrollbar{
+    display: none;
+}
+
+.list-project__wrapper{
+    display: none;
+    flex-direction: column;
+}
+
+.list__wrapper{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+}
+
+.project > h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project__img > img{
+    width: 20vw;
 }
 
 .interaction-project > a:not(:last-child){
@@ -93,4 +139,8 @@ header{
     text-align: center;
     width: 25vw;
     margin: 0 auto;
+}
+
+.liked-progect_button{
+    margin-top: 35px;
 }
