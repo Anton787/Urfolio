@@ -1,8 +1,8 @@
 /* ШАПКА */
-nav{
+/* nav{
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .project__information > a:hover{
     color: #777E90;

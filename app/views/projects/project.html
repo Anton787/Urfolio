@@ -1,0 +1,65 @@
+{% extends 'project_template.html' %}
+
+{% block title %}{{ item.title }}{% endblock %}
+
+{% block content %}
+    <div class="project__card">
+        <a href="#" id="user-project__link">
+            <img src="{{ 'gallery-img.svg'|safe_image }}" class="project-img" alt="Превью проекта" id="project-photo">
+        </a>
+        <div class="project-info__wrapper">
+            <div class="project__title">
+                <h1 id="name-progect">Название проекта</h1>
+                <div class="typeDate-project">
+                    <span id="type-project" class="standart-text_light-grey">Тип проекта</span>
+                    <span class="standart-text_light-grey" id="project-date">2023-2024</span>
+                </div>
+                <h3>Описание</h3>
+                <p class="progect__description">
+                    <span id="progect__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus dolor ducimus! Ab quod eaque, distinctio, deleniti maxime</span>
+                </p>
+            </div>
+            <div class="interact-project__wrapper">
+                <div class="interact-project">
+                    <a href=""><span class="interact-profile">Редактировать</span></a>
+                    <button><span class="interact-profile">Удалить</span></button>
+                </div>
+                <div class="project__information">
+                    <div class="project__rating">
+                        <div class="like__wrapper">
+                            <button type="button" class="info__rating-project" id="like-button">
+                                <svg id="like-icon" width="43" height="38" viewBox="0 0 43 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.4021 38L18.2988 35.2665C7.27672 25.5956 0 19.2174 0 11.3896C0 5.01144 5.17932 0 11.7712 0C15.4951 0 19.0693 1.67738 21.4021 4.32807C23.735 1.67738 27.3091 0 31.0331 0C37.6249 0 42.8043 5.01144 42.8043 11.3896C42.8043 19.2174 35.5275 25.5956 24.5054 35.2872L21.4021 38Z" fill="#CAD1E1"/>
+                                </svg>
+                                <span class="activities-number" id="like-number">0</span>
+                            </button>
+                        </div>
+                        <div class="info__rating-project">
+                            <button type="button" id="share"><img src="{{ 'Share.png'|icons }}" alt="Иконка поделиться"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-gallery">
+        <button id="left_btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9091 15.2652C17.5032 14.8906 16.8706 14.9159 16.496 15.3217L13.2652 18.8217C12.9116 19.2047 12.9116 19.7952 13.2652 20.1782L16.496 23.6783C16.8706 24.0841 17.5032 24.1094 17.909 23.7348C18.3149 23.3602 18.3402 22.7276 17.9656 22.3217L16.284 20.5L26 20.5C26.5523 20.5 27 20.0523 27 19.5C27 18.9477 26.5523 18.5 26 18.5L16.284 18.5L17.9656 16.6783C18.3402 16.2725 18.3149 15.6398 17.9091 15.2652Z" fill="#777E90"/>
+            </svg>
+        </button>
+        <div class="gallery-feed">
+            <img src="{{ 'gallery-img.svg'|safe_image }}" class="see-img" alt="">
+            <img src="{{ 'gallery-img.svg'|safe_image }}" class="see-img" alt="">
+            <img src="{{ 'gallery-img.svg'|safe_image }}" class="see-img" alt="">
+            <img src="{{ 'logo.png'|image }}" width="384" height="270" class="see-img" alt="">
+        </div>
+        <button id="right_btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0909 15.2652C22.4968 14.8906 23.1294 14.9159 23.504 15.3217L26.7348 18.8217C27.0884 19.2047 27.0884 19.7952 26.7348 20.1782L23.504 23.6783C23.1294 24.0841 22.4968 24.1094 22.091 23.7348C21.6851 23.3602 21.6598 22.7276 22.0344 22.3217L23.716 20.5L14 20.5C13.4477 20.5 13 20.0523 13 19.5C13 18.9477 13.4477 18.5 14 18.5L23.716 18.5L22.0344 16.6783C21.6598 16.2725 21.6851 15.6398 22.0909 15.2652Z" fill="#777E90"/>
+            </svg>
+        </button>
+    </div>
+    
+    {% include 'comments/comment_wrapper.html' %}
+{% endblock %}

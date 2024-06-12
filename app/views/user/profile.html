@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../style/standart.css">
-    <link rel="stylesheet" href="../style/profile.css">
-</head>
-<body>
-    <header>
-        <a href="./main.html"><img src="../assets/img/logo.png" alt="Логотип"></a>
-    </header>
-    <hr>
-    <main>
+{% extends 'index.html' %}
+
+{% block title %}Urfolio – Профиль{% endblock %}
+
+{% block content %}
         <div class="profile-info">
             <div class="profile-avatar">
                 <img src="../assets/img/gallery-img.svg" alt="">
@@ -170,8 +160,4 @@
                 </div>
             </div>
         </div>
-    </main>
-
-    <script src="../js/profile.js" defer></script>
-</body>
-</html>
+{% endblock %}

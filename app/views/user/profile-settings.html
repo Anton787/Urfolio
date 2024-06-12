@@ -1,18 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../style/standart.css">
-    <link rel="stylesheet" href="../style/profileEdit.css">
-</head>
-<body>
-    <header>
-        <a href="./main.html"><img src="../assets/img/logo.png" alt="Логотип"></a>
-    </header>
-    <hr>
-    <main>
+{% extends 'index.html' %}
+
+{% block title %}Редактирование профиля{% endblock %}
+
+{% block content %}
         <h1>Редактировать профиль</h1>
         <form form action="" name="user-info" method="post">
             <div class="edit-description">
@@ -63,7 +54,4 @@
                 </div>
             </div>
         </form>
-    </main>
-    <footer></footer>
-</body>
-</html>
+{% endblock %}

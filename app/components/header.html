@@ -1,0 +1,25 @@
+<header>
+  <nav class="navbar navbar-fixed-top">
+    <a href="/"
+      ><img src="{{ 'logo.png'|image }}" class="logo" alt="Логотип"
+    /></a>
+    <div class="user-profile user__text_DM-sans">
+      <!-- НС -->
+      <a href="/regitration"
+        ><span class="interaction-profile__text">Зарегистрироваться</span></a
+      >
+      <a href="/login"><span class="interaction-profile__text">Войти</span></a>
+      <a
+        href="/profile"
+        id="profile-link"
+        class="user-profile__link user__text_DM-sans">
+        <p class="nick-name" id="user-name">NickName</p>
+        <div class="user-avatar"></div>
+      </a>
+      <a href="/logout"
+        ><span class="interaction-profile__text logout">Выйти</span></a
+      >
+      <!-- НК, стили находятся в standart.css -->
+    </div>
+  </nav>
+</header>
