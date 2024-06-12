@@ -4,17 +4,18 @@
 
 {% block content %}
     <div class="project__card">
-        <a href="#" id="user-project__link"><img src="../assets/img/project-photo.png" class="project-img" alt="Превью проекта" id="project-photo"></a>
+        <a href="#" id="user-project__link">
+            <img src="{{ 'gallery-img.svg'|safe_image }}" class="project-img" alt="Превью проекта" id="project-photo">
+        </a>
         <div class="project-info__wrapper">
             <div class="project__title">
-                <a href="#" id="user-project__link">
-                    <h1 id="name-progect">Название проекта</h1>
-                </a>
+                <h1 id="name-progect">Название проекта</h1>
                 <div class="typeDate-project">
-                    <span id="type-project" class="standart-text_light-grey">Тип проекта</span><span class="standart-text_light-grey" id="project-date">2023-2024</span>
+                    <span id="type-project" class="standart-text_light-grey">Тип проекта</span>
+                    <span class="standart-text_light-grey" id="project-date">2023-2024</span>
                 </div>
+                <h3>Описание</h3>
                 <p class="progect__description">
-                    <b>Описание проекта</b><br> 
                     <span id="progect__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus dolor ducimus! Ab quod eaque, distinctio, deleniti maxime</span>
                 </p>
             </div>
@@ -34,7 +35,7 @@
                             </button>
                         </div>
                         <div class="info__rating-project">
-                            <button type="button" id="share"><img src="../assets/img/Share.png" alt="Иконка поделиться"></button>
+                            <button type="button" id="share"><img src="{{ 'Share.png'|icons }}" alt="Иконка поделиться"></button>
                         </div>
                     </div>
                 </div>
@@ -48,10 +49,10 @@
             </svg>
         </button>
         <div class="gallery-feed">
-            <img src="../assets/img/gallery-img.svg" class="see-img" alt="">
-            <img src="../assets/img/gallery-img.svg" class="see-img" alt="">
-            <img src="../assets/img/gallery-img.svg" class="see-img" alt="">
-            <img src="../assets/img/logo.png" width="384" height="270" class="see-img" alt="">
+            <img src="{{ 'gallery-img.svg'|safe_image }}" class="see-img" alt="">
+            <img src="{{ 'gallery-img.svg'|safe_image }}" class="see-img" alt="">
+            <img src="{{ 'gallery-img.svg'|safe_image }}" class="see-img" alt="">
+            <img src="{{ 'logo.png'|image }}" width="384" height="270" class="see-img" alt="">
         </div>
         <button id="right_btn">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
