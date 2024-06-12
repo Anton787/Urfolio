@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ 'main.css'|style }}">
+    <link rel="stylesheet" href="{{ 'standart.css'|style }}">
+
+    <title>{% block title %} Urfolio {% endblock %}</title>
+</head>
+<body>
+    {% include 'header.html' with context%}
+    <hr>
+    <main>
+        {% block content %}
+        <!-- Основное содержание будет рендериться тут -->
+        {% endblock %}
+    </main>
+    {% include 'footer.html' with context%}
+    
+
+    <script src="{{ 'main.js'|script }}" defer></script>
+</body>
+</html>
